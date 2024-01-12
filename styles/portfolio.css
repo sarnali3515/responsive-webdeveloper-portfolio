@@ -67,9 +67,9 @@ nav a {
 
 .header {
     background-color: #FFF8F3;
-    background-image: url(../images/header_bg.png);
+    background-image: url(../images/header_bg.png), url(../images/developer.png);
     background-repeat: no-repeat;
-    background-position: bottom right;
+    background-position: bottom right, top left;
 }
 
 .banner {
@@ -100,7 +100,6 @@ nav a {
     margin-bottom: 20px;
 }
 
-.banner-desc {}
 
 /* main section */
 main {
@@ -226,18 +225,36 @@ textarea {
 /* mobile devises */
 @media screen and (max-width:576px) {
 
+    .header {
+        background-image: none;
+    }
+
+    nav>ul,
+    nav,
+    .banner,
     .skills-container,
     .resume-container,
+    .about-info-container,
     footer {
         flex-direction: column;
     }
 
-    #what-description {
-        padding: 10px;
+    .banner .profile-pic {
+        width: 100%;
     }
 
-    footer {
-        padding: 10px;
+    .banner,
+    #what-description {
+        padding: 20px;
+    }
+
+    .btn-primary {
+        margin-bottom: 15px;
+    }
+
+    footer,
+    .about {
+        padding: 20px;
     }
 
     .footer-column {
@@ -249,6 +266,8 @@ textarea {
     textarea {
         width: 80%;
     }
+
+
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {}
